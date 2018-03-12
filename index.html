@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>贴吧管理页面</title>
+		<meta http-equiv="content-type" content="text/html" charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+		<link href="css/bootstrap-theme.min.css" type="text/css" rel="stylesheet">
+		<link href="css/main.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<body>
+		<!--页眉.start-->
+		<header class="header">
+			<nav class="navbar navbar-default" role="navigation">
+
+				<!--左边logo.start-->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                           <span class="sr-only">Toggle navigation</span>                                                                                                            
+		    			   <span class="icon-bar"></span>	
+		    			   <span class="icon-bar"></span>
+		    			   <span class="icon-bar"></span>
+		    			</button>
+					<a href="#" class="navbar-brand">贴吧后台管理系统</a>
+				</div>
+				<!--左边logo.end-->
+
+				<div class="container">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li class="active">
+								<a href="#">内容审核</a>
+							</li>
+							<li>
+								<a href="#">贴吧管理</a>
+							</li>
+							<li>
+								<a href="#">数据统计</a>
+							</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<form class="navbar-form  navbar-left" role="search">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="搜索">
+								</div>
+								<button type="submit" class="btn btn-default">Submit</button>
+							</form>
+							<li>
+								<a href="#">未读信息<span class="badge">5</span></a>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Admin_one<b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="#">我删除的条目</a>
+									</li>
+									<li>
+										<a href="#">我修改的条目</a>
+									</li>
+									<li>
+										<a href="#">我恢复的条目</a>
+									</li>
+									<li class="divider"></li>
+									<li>
+										<a href="#">注销</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<!--页眉.end-->
+
+		<!--主体部分.start-->
+		<div class="container">
+			<div class="row">
+				<!--左侧目录.start-->
+				<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+					<!--列表.start-->
+					<div class="list-group">
+						<a href="#" class="list-group-item active">主贴审核</a>
+						<a href="#" class="list-group-item">回复审核</a>
+						<a href="#" class="list-group-item">用户管理</a>
+						<a href="#" class="list-group-item">版主审核</a>
+						<a href="#" class="list-group-item">主贴审核日志</a>
+						<a href="#" class="list-group-item">回复审核日志</a>
+						<a href="#" class="list-group-item">用户管理日志</a>
+					</div>
+					<!--列表.end-->
+
+				</div>
+				<!--左侧目录.end-->
+				<!--右侧目录.start-->
+				<div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+					<div class="panel panel-default">
+						<!--仪表盘头.start-->
+						<div class="panel-heading">
+							<h4>主贴审核</h4>
+							<div class="form-group">
+								<span>全选   <input type="checkbox"></span>
+								<button class="btn btn-success">通过</button>
+								<button class="btn btn-primary">恢复</button>
+								<button class="btn btn-danger">删除</button>
+								<ul class="pagination visible-lg visible-md visible-sm" id="page-right">
+									<li>
+										<a href="#">&laquo;</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">&raquo;</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--仪表盘头.end-->
+						<!--仪表盘头.start-->
+						<div class="panel-body">
+							<table class="table">
+								<tr>
+									<th></th>
+									<th>审核状态</th>
+									<th>标题</th>
+									<th>作者</th>
+									<th>创建时间</th>
+									<th>详情</th>
+								</tr>
+								<tr>
+									<td><input type="checkbox"></td>
+									<td><span class="label label-default">未审核</span></td>
+									<td><a href="#">Bootstrap框架设计问题探讨</a></td>
+									<td><a href="#">KING</a></td>
+                                    <td>2017年1月8日 08:08</td>
+                                    <td>
+                                    	<a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="datail-link">
+                                    		<span class="glyphicon glyphicon-chevron-down"></span>
+                                    	</a>
+                                    </td>
+								</tr>
+								<tr id="collapse1" class="collapse">
+									<td colspan="10">Bootstrap框架设计问题探讨明细</td>
+								</tr>
+									<tr>
+									<td><input type="checkbox"></td>
+									<td><span class="label label-default">未审核</span></td>
+									<td><a href="#">Bootstrap框架设计问题探讨</a></td>
+									<td><a href="#">KING</a></td>
+                                    <td>2017年1月8日 08:08</td>
+                                    <td>
+                                    	<a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="datail-link">
+                                    		<span class="glyphicon glyphicon-chevron-down"></span>
+                                    	</a>
+                                    </td>
+								</tr>
+								<tr id="collapse1" class="collapse">
+									<td colspan="10">Bootstrap框架设计问题探讨明细</td>
+								</tr>
+									<tr>
+									<td><input type="checkbox"></td>
+									<td><span class="label label-default">未审核</span></td>
+									<td><a href="#">Bootstrap框架设计问题探讨</a></td>
+									<td><a href="#">KING</a></td>
+                                    <td>2017年1月8日 08:08</td>
+                                    <td>
+                                    	<a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="datail-link">
+                                    		<span class="glyphicon glyphicon-chevron-down"></span>
+                                    	</a>
+                                    </td>
+								</tr>
+								<tr id="collapse1" class="collapse">
+									<td colspan="10">Bootstrap框架设计问题探讨明细</td>
+								</tr>
+									<tr>
+									<td><input type="checkbox"></td>
+									<td><span class="label label-default">未审核</span></td>
+									<td><a href="#">Bootstrap框架设计问题探讨</a></td>
+									<td><a href="#">KING</a></td>
+                                    <td>2017年1月8日 08:08</td>
+                                    <td>
+                                    	<a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="datail-link">
+                                    		<span class="glyphicon glyphicon-chevron-down"></span>
+                                    	</a>
+                                    </td>
+								</tr>
+								<tr id="collapse1" class="collapse">
+									<td colspan="10">Bootstrap框架设计问题探讨明细</td>
+								</tr>
+									<tr>
+									<td><input type="checkbox"></td>
+									<td><span class="label label-primary">已恢复</span></td>
+									<td><a href="#">Bootstrap框架设计问题探讨</a></td>
+									<td><a href="#">KING</a></td>
+                                    <td>2017年1月8日 08:08</td>
+                                    <td>
+                                    	<a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="datail-link">
+                                    		<span class="glyphicon glyphicon-chevron-down"></span>
+                                    	</a>
+                                    </td>
+								</tr>
+								<tr id="collapse1" class="collapse">
+									<td colspan="10">Bootstrap框架设计问题探讨明细</td>
+								</tr>
+									<tr>
+									<td><input type="checkbox"></td>
+									<td><span class="label label-success">已通过</span></td>
+									<td><a href="#">Bootstrap框架设计问题探讨</a></td>
+									<td><a href="#">KING</a></td>
+                                    <td>2017年1月8日 08:08</td>
+                                    <td>
+                                    	<a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="datail-link">
+                                    		<span class="glyphicon glyphicon-chevron-down"></span>
+                                    	</a>
+                                    </td>
+								</tr>
+								<tr id="collapse1" class="collapse">
+									<td colspan="10">Bootstrap框架设计问题探讨明细</td>
+								</tr>
+										<tr>
+									<td><input type="checkbox"></td>
+									<td><span class="label label-danger">已删除</span></td>
+									<td><a href="#">Bootstrap框架设计问题探讨</a></td>
+									<td><a href="#">KING</a></td>
+                                    <td>2017年1月8日 08:08</td>
+                                    <td>
+                                    	<a href="#collapse1" data-toggle="collapse" data-parent="#accordion" class="datail-link">
+                                    		<span class="glyphicon glyphicon-chevron-down"></span>
+                                    	</a>
+                                    </td>
+								</tr>
+								<tr id="collapse1" class="collapse">
+									<td colspan="10">Bootstrap框架设计问题探讨明细</td>
+								</tr>
+							</table>
+							<ul class="pagination visible-xs">
+									<li>
+										<a href="#">&laquo;</a>
+									</li>
+									<li class="active">
+										<a href="#">1</a>
+									</li>
+									<li>
+										<a href="#">2</a>
+									</li>
+									<li>
+										<a href="#">3</a>
+									</li>
+									<li>
+										<a href="#">4</a>
+									</li>
+									<li>
+										<a href="#">5</a>
+									</li>
+									<li>
+										<a href="#">&raquo;</a>
+									</li>
+								</ul>
+						</div>
+						<!--仪表盘头.end-->
+					</div>
+				</div>
+				<!--右侧目录.end-->
+			</div>
+		</div>
+		<!--主体部分.end-->
+	</body>
+
+</html>
